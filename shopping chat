@@ -14,13 +14,15 @@ while True:
   choice_list = input ("你要几号商品"):
   if choice_list.isdigit():
     choice_list = int (choice_list)
-    choice_list < len(product_list) and choice_list >=0:
+  if choice_list < len(product_list) and choice_list >=0:
       p_item = product_list[choice_list]
       if p_item[1] < salary :
-      shopping_list.append(p_item)
-      salary -= p_item[1]
+        shopping_list.append(p_item)
+        salary -= p_item[1]
         print("你已经买了%s,并且余额还有%s"%(p_item,salary))
-      elif choice_list =='q':
-        print("欢迎下次光临,你还有现金%s"%salary
       else:
-        print("输入错误")
+        print("余额不足，你只有%s元"%salary）
+  elif choice_list =='q':
+    print("欢迎下次光临,你还有现金%s"%salary
+  else:
+    print("输入错误")
