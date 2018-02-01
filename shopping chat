@@ -1,0 +1,26 @@
+product_list = [
+('bike',300),
+('iwatch',3200),
+('book',100),
+('coffee',30)
+]
+shopping_list =[]
+salary = input("告诉我你有多少现金")
+if salary.isdigit():
+  salary = int(salary)
+while True:
+  for index,item in enumulate(product_list):
+    print(index,item)
+  choice_list = input ("你要几号商品"):
+  if choice_list.isdigit():
+    choice_list = int (choice_list)
+    choice_list < len(product_list) and choice_list >=0:
+      p_item = product_list[choice_list]
+      if p_item[1] < salary :
+      shopping_list.append(p_item)
+      salary -= p_item[1]
+        print("你已经买了%s,并且余额还有%s"%(p_item,salary))
+      elif choice_list =='q':
+        print("欢迎下次光临,你还有现金%s"%salary
+      else:
+        print("输入错误")
